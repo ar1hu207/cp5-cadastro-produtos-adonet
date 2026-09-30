@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+.vscode/
+*.user
+*.suo
+TestResults/
+
+# Banco e log gerados em tempo de execução
+*.db
+*.db-shm
+*.db-wal
+logs/

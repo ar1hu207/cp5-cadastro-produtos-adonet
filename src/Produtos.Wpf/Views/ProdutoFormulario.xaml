@@ -1,0 +1,38 @@
+<UserControl x:Class="Produtos.Wpf.Views.ProdutoFormulario"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="16" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="16" />
+            <ColumnDefinition Width="1.4*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="16" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.ColumnSpan="5">
+            <TextBlock Text="NOME" Style="{StaticResource Rotulo}" />
+            <TextBox x:Name="txtNome" MaxLength="100" AutomationProperties.AutomationId="txtNome" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <TextBlock Text="PREÇO (R$)" Style="{StaticResource Rotulo}" />
+            <TextBox x:Name="txtPreco" AutomationProperties.AutomationId="txtPreco" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="2">
+            <TextBlock Text="ESTOQUE" Style="{StaticResource Rotulo}" />
+            <TextBox x:Name="txtEstoque" AutomationProperties.AutomationId="txtEstoque" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="4">
+            <TextBlock Text="CATEGORIA" Style="{StaticResource Rotulo}" />
+            <ComboBox x:Name="cmbCategoria" IsEditable="True" AutomationProperties.AutomationId="cmbCategoria" />
+        </StackPanel>
+    </Grid>
+</UserControl>
